@@ -4,19 +4,30 @@
 </template>
 
 <script>
-import Menu from './components/Menu'
+import { useI18n } from "vue-i18n";
+import Menu from "./components/Menu";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Menu: Menu
-  }
-}
+    Menu: Menu,
+  },
+  setup() {
+    const { t } = useI18n({
+      inheritLocale: true,
+      useScope: "local",
+    });
+
+    document.title = t("title");
+
+    return { t };
+  },
+};
 </script>
 
 <style>
-html, body {
-  margin-top: 5%;
+body {
+  padding-top: 5rem;
 }
 
 #app {

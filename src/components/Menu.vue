@@ -1,7 +1,9 @@
 <template>
   <div id="nav">
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="#">Phetchaburi Covid19 Timeline</a>
+    <nav
+      class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary shadow"
+    >
+      <a class="navbar-brand" href="#">{{ t("title") }}</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -17,10 +19,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <router-link to="/" class="nav-link" replace>Home</router-link>
+            <router-link to="/" class="nav-link" replace>{{
+              t("menu.home")
+            }}</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/about" class="nav-link" replace>About</router-link>
+            <router-link to="/about" class="nav-link" replace>{{
+              t("menu.about")
+            }}</router-link>
           </li>
         </ul>
       </div>
@@ -29,7 +35,17 @@
 </template>
 
 <script>
+import { useI18n } from "vue-i18n";
+
 export default {
-  name: 'Menu',
-}
+  name: "Menu",
+  setup() {
+    const { t } = useI18n({
+      inheritLocale: true,
+      useScope: "local",
+    });
+
+    return { t };
+  },
+};
 </script>

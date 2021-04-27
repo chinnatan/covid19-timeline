@@ -1,6 +1,21 @@
 {
-    "dashboard": {
-        "today_is_cured": "รักษาหายวันนี้",
-        "total_is_cured": "รวมรักษาหาย"
+  "title": "Phetchaburi Covid-19 Timeline",
+  "menu": {
+    "home": "หน้าหลัก",
+    "about": "เกี่ยวกับเรา"
+  },
+  "dashboard": {
+    "info_as_of": "ข้อมูล ณ วันที่",
+    "today_is_cured": "รักษาหายวันนี้",
+    "total_is_cured": "รวมรักษาหาย",
+    "new_people_covid19_today": "ผู้ติดเชื้อใหม่วันนี้",
+    "total_new_people_covid19": "ผู้ติดเชื้อสะสมรวม",
+    "still_preserved": "ยังรักษาอยู่",
+    "dead": "เสียชีวิต"
+  },
+  "common": {
+    "unit": {
+      "person": "ราย"
     }
   }
+}
